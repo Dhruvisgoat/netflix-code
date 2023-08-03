@@ -1,0 +1,17 @@
+h2 {
+    margin: 0px 0px 0px 10px;
+    color: white;
+}
+
+.Row {
+    background-color: black;
+    padding: relative;
+
+    >div {
+        overflow-x: auto;
+        display: flex;
+        margin: 0px 5px 5px 0px;
+
+    }
+
+}

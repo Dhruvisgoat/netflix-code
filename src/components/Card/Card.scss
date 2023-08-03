@@ -1,0 +1,58 @@
+.Card {
+  font-weight: 800;
+  margin: 0 10px 0px 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* align items to the bottom */
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.Card > img {
+  top: 0;
+  left: 0;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  filter: blur(0);
+}
+
+.Card:hover {
+  cursor: pointer;
+  & > img {
+    filter: blur(2px);
+  }
+  & > .opacity {
+    opacity: 1;
+    font-weight: bold;
+  }
+}
+
+.Card > .opacity {
+  position: absolute;
+  top:10%;
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  text-align: center;
+  max-width: 90%;
+}
+
+.Card > .opacity > h3 {
+  margin: 0; /* remove default margin */
+  padding-bottom: 1rem; /* add space between title and buttons */
+}
+
+.Card > .opacity > .banner__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.Card > .opacity > .banner__buttons > .banner__button {
+  font-size: 20px;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem; /* reduce button size */
+  width: 7rem;
+}
